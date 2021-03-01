@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BullsEye
 //
-//  Created by Cat on 2/28/21.
+//  Created by Alyssa Ma on 2/28/21.
 //
 
 import UIKit
