@@ -27,8 +27,9 @@ class ViewController: UIViewController {
             title: "Awesome",
             style: .default,
             handler: nil)
-        
+        //adds this as a new alert action
         alert.addAction(action)
+        //animated action
         present(alert, animated: true, completion: nil)
     }
 }
