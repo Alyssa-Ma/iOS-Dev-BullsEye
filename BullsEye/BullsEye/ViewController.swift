@@ -15,13 +15,18 @@ class ViewController: UIViewController {
     //store the target value
     var targetValue = 0
     
+    //runs only on app startup
     override func viewDidLoad() {
         super.viewDidLoad()
+        //start a new game round
+        startNewRound()
+        /**
         // Do any additional setup after loading the view.
         //initialize the value to what the slider value is
         currentValue = lroundf(slider.value)
         //set target value to a random int from 1 to 100
         targetValue = Int.random(in: 1...100)
+         */
     }
 
     //alert display functionality
@@ -44,6 +49,8 @@ class ViewController: UIViewController {
         alert.addAction(action)
         //animated action
         present(alert, animated: true, completion: nil)
+        //start new round after showing alert
+        startNewRound()
     }
     
     //slider functionality
