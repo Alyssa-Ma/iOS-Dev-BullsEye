@@ -35,8 +35,15 @@ class ViewController: UIViewController {
     @IBAction func showAlert()
     {
         //difference algorithm
-        var difference: Int
+        var difference = currentValue - targetValue
+        //if the difference between the values is less than 0, make the difference positive
+        if difference < 0
+        {
+            difference *= -1
+        }
         
+        /**
+         old code, inefficient
         //if the current value is greater than target value, calculate the difference like so
         if currentValue > targetValue
         {
@@ -52,6 +59,7 @@ class ViewController: UIViewController {
         {
             difference = 0
         }
+         */
         //tells user what the current value is and what the target value is
         let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe idfference is: \(difference)"
         
