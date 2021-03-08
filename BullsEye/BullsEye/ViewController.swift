@@ -34,8 +34,26 @@ class ViewController: UIViewController {
     //alert display functionality
     @IBAction func showAlert()
     {
+        //difference algorithm
+        var difference: Int
+        
+        //if the current value is greater than target value, calculate the difference like so
+        if currentValue > targetValue
+        {
+            difference = currentValue - targetValue
+        }
+        //else if target value is greater than the current value, calculate like so
+        else if targetValue > currentValue
+        {
+            difference = targetValue - currentValue
+        }
+        //else the difference is 0
+        else
+        {
+            difference = 0
+        }
         //tells user what the current value is and what the target value is
-        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)"
+        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe idfference is: \(difference)"
         
         //creates iphone alert that shows message that has the filled title and message
         let alert = UIAlertController(
