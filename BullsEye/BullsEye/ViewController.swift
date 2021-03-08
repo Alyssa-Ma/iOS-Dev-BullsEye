@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     //store the target value
     var targetValue = 0
+    //change target label
+    @IBOutlet var targetLabel: UILabel!
     
     //runs only on app startup
     override func viewDidLoad() {
@@ -67,10 +69,18 @@ class ViewController: UIViewController {
     {
         //generate a new target value
         targetValue = Int.random(in: 1...100)
-        //set the current value to 1
-        currentValue = 1
+        //set the current value to 1, this line can be uncommented to have the value start at 1 for every new round
+        //currentValue = 1
         //set slider value to the new current value
         slider.value = Float(currentValue)
+        //update the labels when new round starts
+        updateLabels()
+    }
+    
+    //to update the labels
+    func updateLabels()
+    {
+        targetLabel.text = String(targetValue)
     }
 }
 
