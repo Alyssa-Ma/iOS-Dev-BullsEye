@@ -46,42 +46,31 @@ class ViewController: UIViewController {
         let points = 100 - difference
         //add points to total score
         score += points
-        //message of how many points player got
-        let message = "You scored \(points) points"
-        /**
-         //more inefficient code
-        //difference algorithm
-        var difference = currentValue - targetValue
-        //if the difference between the values is less than 0, make the difference positive
-        if difference < 0
+        
+        //alert messages based on points
+        let title: String
+        if difference == 0
         {
-            difference *= -1
+            title = "Perfect!"
         }
-         */
-        /**
-         old code, inefficient
-        //if the current value is greater than target value, calculate the difference like so
-        if currentValue > targetValue
+        else if difference < 5
         {
-            difference = currentValue - targetValue
+            title = "You almost had it!"
         }
-        //else if target value is greater than the current value, calculate like so
-        else if targetValue > currentValue
+        else if difference < 10
         {
-            difference = targetValue - currentValue
+            title = "Pretty good!"
         }
-        //else the difference is 0
         else
         {
-            difference = 0
+            title = "Not even close..."
         }
-         */
-        //tells user what the current value is and what the target value is
-        //let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe difference is: \(difference)"
+        //message of how many points player got
+        let message = "You scored \(points) points"
         
         //creates iphone alert that shows message that has the filled title and message
         let alert = UIAlertController(
-            title: "Hello, World",
+            title: title,
             message: message,
             preferredStyle: .alert)
         //button to reply
