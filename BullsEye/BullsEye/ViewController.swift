@@ -9,13 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
     //var to keep track of slider value, slider starts at 1
-    var currentValue: Int = 1
+    var currentValue: Int = 0
     //outlet to store a reference to the slider
     @IBOutlet var slider: UISlider!
     //store the target value
     var targetValue = 0
+    //store score
+    var score = 0
     //change target label
     @IBOutlet var targetLabel: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
     
     //runs only on app startup
     override func viewDidLoad() {
@@ -38,6 +41,8 @@ class ViewController: UIViewController {
         let difference = abs(targetValue - currentValue)
         //calculate the number of points
         let points = 100 - difference
+        //add points to total score
+        score += points
         //message of how many points player got
         let message = "You scored \(points) points"
         /**
@@ -115,6 +120,7 @@ class ViewController: UIViewController {
     func updateLabels()
     {
         targetLabel.text = String(targetValue)
+        scoreLabel.text = String(score)
     }
 }
 
