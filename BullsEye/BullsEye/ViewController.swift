@@ -16,9 +16,12 @@ class ViewController: UIViewController {
     var targetValue = 0
     //store score
     var score = 0
+    //keep track of rounds
+    var round = 0
     //change target label
     @IBOutlet var targetLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var roundLabel: UILabel!
     
     //runs only on app startup
     override func viewDidLoad() {
@@ -106,6 +109,8 @@ class ViewController: UIViewController {
     //function that runs when a new game round starts
     func startNewRound()
     {
+        //update round number
+        round += 1
         //generate a new target value
         targetValue = Int.random(in: 1...100)
         //set the current value to 1, this line can be uncommented to have the value start at 1 for every new round
@@ -121,6 +126,7 @@ class ViewController: UIViewController {
     {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
+        roundLabel.text = String(round)
     }
 }
 
