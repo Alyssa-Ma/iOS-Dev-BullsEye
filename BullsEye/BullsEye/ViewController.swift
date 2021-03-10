@@ -34,6 +34,14 @@ class ViewController: UIViewController {
     //alert display functionality
     @IBAction func showAlert()
     {
+        //calculate difference between player value and target value
+        let difference = abs(targetValue - currentValue)
+        //calculate the number of points
+        let points = 100 - difference
+        //message of how many points player got
+        let message = "You scored \(points) points"
+        /**
+         //more inefficient code
         //difference algorithm
         var difference = currentValue - targetValue
         //if the difference between the values is less than 0, make the difference positive
@@ -41,7 +49,7 @@ class ViewController: UIViewController {
         {
             difference *= -1
         }
-        
+         */
         /**
          old code, inefficient
         //if the current value is greater than target value, calculate the difference like so
@@ -61,7 +69,7 @@ class ViewController: UIViewController {
         }
          */
         //tells user what the current value is and what the target value is
-        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe idfference is: \(difference)"
+        //let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe difference is: \(difference)"
         
         //creates iphone alert that shows message that has the filled title and message
         let alert = UIAlertController(
