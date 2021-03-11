@@ -28,13 +28,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //start a new game round
         startNewRound()
-        /**
-        // Do any additional setup after loading the view.
-        //initialize the value to what the slider value is
-        currentValue = lroundf(slider.value)
-        //set target value to a random int from 1 to 100
-        targetValue = Int.random(in: 1...100)
-         */
     }
 
     //alert display functionality
@@ -84,13 +77,11 @@ class ViewController: UIViewController {
         let action = UIAlertAction(
             title: "OK",
             style: .default,
-            handler: nil)
+            handler: { _ in self.startNewRound()})
         //adds this as a new alert action
         alert.addAction(action)
         //animated action
         present(alert, animated: true, completion: nil)
-        //start new round after showing alert
-        startNewRound()
     }
     
     //slider functionality
@@ -98,8 +89,6 @@ class ViewController: UIViewController {
     {
         //set current vallue to the slider value
         currentValue = lroundf(slider.value)
-        //check value of slider by printing into console
-        //print("The value of the slider is now: \(slider.value)")
     }
     
     //function that runs when a new game round starts
@@ -109,8 +98,6 @@ class ViewController: UIViewController {
         round += 1
         //generate a new target value
         targetValue = Int.random(in: 1...100)
-        //set the current value to 1, this line can be uncommented to have the value start at 1 for every new round
-        //currentValue = 1
         //set slider value to the new current value
         slider.value = Float(currentValue)
         //update the labels when new round starts
