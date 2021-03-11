@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //start a new game round
-        startNewRound()
+        startNewGame()
     }
 
     //alert display functionality
@@ -110,6 +110,16 @@ class ViewController: UIViewController {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
+    }
+    
+    //to start new game
+    @IBAction func startNewGame()
+    {
+        //set score back to 0
+        score = 0
+        //reset rounds
+        round = 0
+        startNewRound()
     }
 }
 
