@@ -42,20 +42,25 @@ class ViewController: UIViewController {
     {
         //calculate difference between player value and target value
         let difference = abs(targetValue - currentValue)
-        //calculate the number of points
-        let points = 100 - difference
-        //add points to total score
-        score += points
+        //calculate the number of points, is a variable because of bonus points
+        var points = 100 - difference
         
         //alert messages based on points
         let title: String
         if difference == 0
         {
             title = "Perfect!"
+            //add bonus points for a perfect
+            points += 100
         }
         else if difference < 5
         {
             title = "You almost had it!"
+            //bonus points for only being 1 off
+            if difference == 1
+            {
+                points += 50
+            }
         }
         else if difference < 10
         {
@@ -65,6 +70,8 @@ class ViewController: UIViewController {
         {
             title = "Not even close..."
         }
+        //add points to total score
+        score += points
         //message of how many points player got
         let message = "You scored \(points) points"
         
