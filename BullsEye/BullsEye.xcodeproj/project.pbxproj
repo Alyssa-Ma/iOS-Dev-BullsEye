@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0D72ED2612898000856AB9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D72EC2612898000856AB9 /* AboutViewController.swift */; };
 		4EDBDB3525EC3DB1003F5FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBDB3425EC3DB1003F5FD4 /* AppDelegate.swift */; };
 		4EDBDB3725EC3DB1003F5FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBDB3625EC3DB1003F5FD4 /* SceneDelegate.swift */; };
 		4EDBDB3925EC3DB1003F5FD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDBDB3825EC3DB1003F5FD4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0D72EC2612898000856AB9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4EDBDB3125EC3DB1003F5FD4 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDBDB3425EC3DB1003F5FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EDBDB3625EC3DB1003F5FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		4EDBDB3325EC3DB1003F5FD4 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				4E0D72EC2612898000856AB9 /* AboutViewController.swift */,
 				4EDBDB3425EC3DB1003F5FD4 /* AppDelegate.swift */,
 				4EDBDB3625EC3DB1003F5FD4 /* SceneDelegate.swift */,
 				4EDBDB3825EC3DB1003F5FD4 /* ViewController.swift */,
@@ -139,6 +142,7 @@
 			files = (
 				4EDBDB3925EC3DB1003F5FD4 /* ViewController.swift in Sources */,
 				4EDBDB3525EC3DB1003F5FD4 /* AppDelegate.swift in Sources */,
+				4E0D72ED2612898000856AB9 /* AboutViewController.swift in Sources */,
 				4EDBDB3725EC3DB1003F5FD4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
